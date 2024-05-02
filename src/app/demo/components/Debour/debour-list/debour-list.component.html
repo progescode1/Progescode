@@ -1,0 +1,53 @@
+<div class="card">
+    <p-table
+        #dt
+        [value]="debours"
+        [paginator]="true"
+        [rows]="10"
+        [showCurrentPageReport]="true"
+        responsiveLayout="scroll"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[10, 25, 50]"
+        [globalFilterFields]="['id', 'libelle', 'date']"
+    >
+        <ng-template pTemplate="caption">
+            <div class="flex flex-wrap gap-2 align-items-center justify-content-between">
+                <span class="p-input-icon-left w-full sm:w-20rem flex-order-1 sm:flex-order-0">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="onGlobalFilter(dt, $event)" placeholder="Global Search" class="w-full" />
+                </span>
+                <button (click)="navigateToCreateDebour()" pButton class="p-button-outlined w-full sm:w-auto flex-order-0 sm:flex-order-1" icon="pi pi-fw pi-desktop" label="Créer un Débour"></button>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="id" class="white-space-nowrap" style="width: 15%">ID <p-sortIcon field="id"></p-sortIcon></th>
+                <th pSortableColumn="date" class="white-space-nowrap" style="width: 20%">Date <p-sortIcon field="date"></p-sortIcon></th>
+                <th pSortableColumn="libelle" class="white-space-nowrap" style="width: 30%">Libelle <p-sortIcon field="libelle"></p-sortIcon></th>
+                <th pSortableColumn="entreeTND" class="white-space-nowrap" style="width: 20%">Entrée TND <p-sortIcon field="entreeTND"></p-sortIcon></th>
+                <th pSortableColumn="sortieTND" class="white-space-nowrap" style="width: 20%">Sortie TND <p-sortIcon field="sortieTND"></p-sortIcon></th>
+                <th pSortableColumn="disponibleTND" class="white-space-nowrap" style="width: 20%">Disponible TND <p-sortIcon field="disponibleTND"></p-sortIcon></th>
+                <th style="width: 10%">Actions</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-debour>
+            <tr>
+                <td>{{ debour.id }}</td>
+                <td>{{ debour.date | date }}</td>
+                <td>{{ debour.libelle }}</td>
+                <td>{{ debour.entreeTND }}</td>
+                <td>{{ debour.sortieTND }}</td>
+                <td>{{ debour.disponibleTND }}</td>
+                <td>
+                    <ng-container *ngIf="debour.id">
+                        <button (click)="updateDebour(debour)" pButton icon="pi pi-pencil" class="p-button-outlined p-button-secondary mr-2 mb-2" tooltip="Update"></button>
+                        <button (click)="deleteDebour(debour)" pButton icon="pi pi-trash" class="p-button-outlined p-button-danger" tooltip="Delete"></button>
+                    </ng-container>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<p-confirmDialog header="Confirmation" key="confirm1" icon="pi pi-exclamation-triangle" message="Are you sure you want to proceed?"
+[style]="{width: '350px'}" acceptButtonStyleClass="p-button-text" rejectButtonStyleClass="p-button-text">
+</p-confirmDialog>

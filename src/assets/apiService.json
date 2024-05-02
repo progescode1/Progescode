@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "nomService": "Audit comptable",
+        "description": "Service d'audit financier et comptable pour les entreprises."
+    },
+    {
+        "id": 2,
+        "nomService": "Déclarations fiscales",
+        "description": "Service de préparation et de soumission des déclarations fiscales."
+    },
+    {
+        "id": 3,
+        "nomService": "Conseil en gestion",
+        "description": "Service de consultation pour la gestion financière et opérationnelle."
+    }
+]

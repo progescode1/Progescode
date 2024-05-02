@@ -1,0 +1,24 @@
+[
+    {
+      "id": "1002",
+      "date": "2024-04-03",
+      "libelle": "Vente de produits A",
+      "entreeTND": 1500,
+      "disponibleTND": 9300
+    },
+    {
+      "id": "1003",
+      "date": "2024-04-10",
+      "libelle": "Achat de matériel informatique",
+      "sortieTND": 700,
+      "disponibleTND": 8600
+    },
+    {
+      "id": "1005",
+      "date": "2024-04-20",
+      "libelle": "Vente de services B",
+      "entreeTND": 2000,
+      "disponibleTND": 10300
+    }
+  ]
+  

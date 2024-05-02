@@ -1,0 +1,53 @@
+<div class="card">
+    <p-table
+        #dt
+        [value]="cabinets"
+        [paginator]="true"
+        [rows]="10"
+        [showCurrentPageReport]="true"
+        responsiveLayout="scroll"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[10, 25, 50]"
+        [globalFilterFields]="['nom', 'email', 'adresse']"
+    >
+        <ng-template pTemplate="caption">
+            <div class="flex flex-wrap gap-2 align-items-center justify-content-between">
+                <span class="p-input-icon-left w-full sm:w-20rem flex-order-1 sm:flex-order-0">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="onGlobalFilter(dt, $event)" placeholder="Global Search" class="w-full" />
+                </span>
+                <button (click)="navigateToCreateCabinet()" pButton class="p-button-outlined w-full sm:w-auto flex-order-0 sm:flex-order-1" icon="pi pi-fw pi-desktop" label="Créer un Cabinet"></button>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="nom" class="white-space-nowrap" style="width: 25%">Nom <p-sortIcon field="nom"></p-sortIcon></th>
+                <th pSortableColumn="email" class="white-space-nowrap" style="width: 25%">Email <p-sortIcon field="email"></p-sortIcon></th>
+                <th pSortableColumn="telephone" class="white-space-nowrap" style="width: 25%">Téléphone <p-sortIcon field="telephone"></p-sortIcon></th>
+                <th pSortableColumn="adresse" class="white-space-nowrap" style="width: 25%">Adresse <p-sortIcon field="adresse"></p-sortIcon></th>
+                <th pSortableColumn="siteWeb" class="white-space-nowrap" style="width: 25%">Site Web <p-sortIcon field="siteWeb"></p-sortIcon></th>
+                <th pSortableColumn="mcnss" class="white-space-nowrap" style="width: 25%">MCNSS <p-sortIcon field="mcnss"></p-sortIcon></th>
+                <th style="width: 10%">Actions</th> <!-- Nouvelle colonne pour les boutons d'action -->
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-cabinet>
+            <tr>
+                <td>{{ cabinet.nom }}</td>
+                <td>{{ cabinet.email }}</td>
+                <td>{{ cabinet.telephone }}</td>
+                <td>{{ cabinet.adresse }}</td>
+                <td>{{ cabinet.siteWeb }}</td>
+                <td>{{ cabinet.mcnss }}</td>
+                <td>
+                    <ng-container *ngIf="cabinet.id"> <!-- Vérification si l'ID existe pour afficher les boutons -->
+                        <button (click)="updateCabinet(cabinet)" pButton icon="pi pi-pencil" class="p-button-outlined p-button-secondary mr-2 mb-2" tooltip="Update"></button>
+                        <button (click)="deleteCabinet(cabinet)" pButton icon="pi pi-trash" class="p-button-outlined p-button-danger" tooltip="Delete"></button>
+                    </ng-container>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+    <p-confirmDialog header="Confirmation" key="confirm1" icon="pi pi-exclamation-triangle" message="Are you sure you want to proceed?"
+[style]="{width: '350px'}" acceptButtonStyleClass="p-button-text" rejectButtonStyleClass="p-button-text">
+</p-confirmDialog>
+</div>

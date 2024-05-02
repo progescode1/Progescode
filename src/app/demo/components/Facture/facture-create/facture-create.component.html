@@ -1,0 +1,50 @@
+<div class="card">
+    <span class="text-900 text-xl font-bold mb-4 block">Créer une Facture</span>
+    <div class="grid">
+        <div class="col-12 lg:col-2">
+            <div class="text-900 font-medium text-xl mb-3">Détails de la Facture</div>
+            <p class="m-0 p-0 text-600 line-height-3 mr-3">
+                <!-- Placeholder -->
+            </p>
+        </div>
+        <div class="col-12 lg:col-10">
+            <div class="grid formgrid p-fluid">
+                <div class="field mb-4 col-12">
+                    <label for="numFacture" class="font-medium text-900">Numéro de Facture</label>
+                    <input id="numFacture" type="text" pInputText [(ngModel)]="newFacture.numFacture" />
+                </div>
+                <div class="field mb-4 col-12">
+                    <label for="idClient" class="font-medium text-900">ID Client</label>
+                    <input id="idClient" type="text" pInputText [(ngModel)]="newFacture.idClient" />
+                </div>
+                <div class="field mb-4 col-12">
+                    <label for="dateFacture" class="font-medium text-900">Date de Facture</label>
+                    <input id="dateFacture" type="date" pInputText [(ngModel)]="newFacture.dateFacture" />
+                </div>
+                <div class="field mb-4 col-12">
+                    <label for="datePaiement" class="font-medium text-900">Date de Paiement</label>
+                    <input id="datePaiement" type="date" pInputText [(ngModel)]="newFacture.datePaiement" />
+                </div>
+                <div class="field mb-4 col-12">
+                    <label for="nomProduit" class="font-medium text-900">Nom du Produit</label>
+                    <input id="nomProduit" type="text" pInputText [(ngModel)]="newFacture.nomProduit" />
+                </div>
+                <div class="field mb-4 col-12">
+                    <label for="nomService" class="font-medium text-900">Nom du Service</label>
+                    <input id="nomService" type="text" pInputText [(ngModel)]="newFacture.nomService" />
+                </div>
+                <div class="field mb-4 col-12">
+                    <label for="quantite" class="font-medium text-900">Quantité</label>
+                    <input id="quantite" type="number" pInputText [(ngModel)]="newFacture.quantite" />
+                </div>
+                <div class="field mb-4 col-12">
+                    <label for="prix" class="font-medium text-900">Prix</label>
+                    <input id="prix" type="number" pInputText [(ngModel)]="newFacture.prix" />
+                </div>
+                <div class="col-12">
+                    <button pButton pRipple label="Créer une Facture" class="w-auto mt-3" (click)="createFacture()"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

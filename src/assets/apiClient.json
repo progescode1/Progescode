@@ -1,0 +1,38 @@
+[
+    {
+      "id": "1",
+      "clientName": "Entreprise El Baraka",
+      "email": "contact@elbaraka.tn",
+      "phone": "+216 71 123 456",
+      "address": "15 Rue de la Liberté, Tunis",
+      "avantage": "Réductions sur services",
+      "assigned": ["Mohamed Ali", "Sarah Amine"],
+      "regime": "Régime simplifié",
+      "service": ["Consultation", "Audit"],
+      "banque": ["Banque Zitouna"]
+    },
+    {
+      "id": "2",
+      "clientName": "Société Le Phénix",
+      "email": "info@lephenix.tn",
+      "phone": "+216 72 234 567",
+      "address": "42 Avenue Habib Bourguiba, Sfax",
+      "avantage": "Offres spéciales",
+      "assigned": ["Leila Ben Salah", "Karim Maaloul"],
+      "regime": "Régime réel",
+      "service": ["Gestion", "Formation"],
+      "banque": ["BIAT", "STB"]
+    },
+    {
+      "id": "3",
+      "clientName": "Compagnie des Oliviers",
+      "email": "support@oliviers.tn",
+      "phone": "+216 73 345 678",
+      "address": "89 Rue des Martyrs, Nabeul",
+      "avantage": "Programme de fidélité",
+      "assigned": ["Faouzi Masmoudi", "Hela Oueslati"],
+      "regime": "Régime agricole",
+      "service": ["Assurance", "Prêts"],
+      "banque": ["ATB", "UIB"]
+    }
+  ]

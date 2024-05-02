@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "numFacture": "F2024001",
+        "idClient": "C1001",
+        "dateFacture": "2024-04-01",
+        "datePaiement": "2024-04-10",
+        "nomProduit": "Produit A",
+        "nomService": "Service X",
+        "quantite": 5,
+        "prix": 100,
+        "total": 500,
+        "tva": 20,
+        "totalTTC": 600
+    },
+    {
+        "id": 2,
+        "numFacture": "F2024002",
+        "idClient": "C1002",
+        "dateFacture": "2024-04-05",
+        "nomProduit": "Produit B",
+        "nomService": "Service Y",
+        "quantite": 3,
+        "prix": 150,
+        "total": 450,
+        "tva": 22.5,
+        "totalTTC": 472.5
+    },
+    {
+        "id": 3,
+        "numFacture": "F2024003",
+        "idClient": "C1003",
+        "dateFacture": "2024-04-10",
+        "datePaiement": "2024-04-15",
+        "nomProduit": "Produit C",
+        "nomService": "Service Z",
+        "quantite": 2,
+        "prix": 200,
+        "total": 400,
+        "tva": 24,
+        "totalTTC": 424
+    }
+]

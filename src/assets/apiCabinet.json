@@ -1,0 +1,39 @@
+[
+    {
+        "id": "1",
+        "nom": "Cabinet de Tunis",
+        "email": "contact@cabinetdetunis.tn",
+        "telephone": "+216 71 234 567",
+        "adresse": "14 Rue de la Liberté, Tunis",
+        "siteWeb": "www.cabinetdetunis.tn",
+        "mcnss": "123456789"
+    },{
+        "id": "2",
+        "nom": "Cabinet de Sfax",
+        "email": "service@cab-sfax.tn",
+        "telephone": "+216 74 123 456",
+        "adresse": "100 Avenue Habib Bourguiba, Sfax",
+        "siteWeb": "www.cabsfax.tn",
+        "mcnss": "987654321"
+    },
+    {
+        "id": 3,
+        "nom": "Cabinet de Sousse",
+        "email": "info@cabinetsousse.tn",
+        "telephone": "+216 73 987 654",
+        "adresse": "5 Rue des Orangers, Sousse",
+        "siteWeb": "www.cabinetsousse.tn",
+        "mcnss": "246810121"
+    },
+    {
+        "id": 4,
+        "nom": "Cabinet de Djerba",
+        "email": "contact@cabinetdjerba.tn",
+        "telephone": "+216 75 321 987",
+        "adresse": "3 Avenue de la Liberté, Djerba",
+        "siteWeb": "www.cabinetdjerba.tn",
+        "mcnss": "135792468"
+    }
+   
+
+]

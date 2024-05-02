@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "regime": "REGIME FISCAL",
+        "statut": "actif"
+    },
+    {
+        "id": 2,
+        "regime": "RETENUE A LA SOURCE",
+        "statut": "inactif"
+    },
+    {
+        "id": 3,
+        "regime": "TFP",
+        "statut": "inactif"
+    },
+    {
+        "id": 4,
+        "regime": "FOPROLOS",
+        "statut": "inactif"
+    },
+    {
+        "id": 5,
+        "regime": "TVA",
+        "statut": "actif"
+    },
+    {
+        "id": 6,
+        "regime": "AUTRES TAXES/CA",
+        "statut": "inactif"
+    },
+    {
+        "id": 7,
+        "regime": "LIASSE FISCALE",
+        "statut": "inactif"
+    },
+    {
+        "id": 8,
+        "regime": "DEC EMP",
+        "statut": "inactif"
+    }
+]

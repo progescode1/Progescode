@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "nom": "Banque de Tunisie (BT)",
+      "adresse": "100 Avenue Habib Bourguiba, Tunis",
+      "contacts": "Tel: +216 71 333 000",
+      "servicesOfferts": "Comptes courants, épargne, crédits, assurances"
+    },
+    {
+      "id": 2,
+      "nom": "Banque Nationale Agricole (BNA)",
+      "adresse": "69 Avenue Habib Bourguiba, Tunis",
+      "contacts": "Tel: +216 71 134 000",
+      "servicesOfferts": "Crédits agricoles, comptes professionnels, épargne"
+    },
+    {
+      "id": 3,
+      "nom": "Amen Bank",
+      "adresse": "12 Avenue de Paris, Tunis",
+      "contacts": "Tel: +216 71 111 000",
+      "servicesOfferts": "Services bancaires privés, investissements, prêts"
+    },
+    {
+      "id": 4,
+      "nom": "Banque Zitouna",
+      "adresse": "1 Rue de l'artisanat, Charguia II",
+      "contacts": "Tel: +216 70 013 000",
+      "servicesOfferts": "Finance islamique, épargne, Takaful"
+    },
+    {
+      "id": 5,
+      "nom": "Attijari Bank",
+      "adresse": "95 Avenue de la Liberté, Tunis",
+      "contacts": "Tel: +216 71 888 000",
+      "servicesOfferts": "Prêts personnels et professionnels, bourse, assurance"
+    }
+  ]
+  

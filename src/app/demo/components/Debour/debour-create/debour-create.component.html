@@ -1,0 +1,42 @@
+<div class="card">
+    <span class="text-900 text-xl font-bold mb-4 block">Créer un Débour</span>
+    <div class="grid">
+        <div class="col-12 lg:col-2">
+            <div class="text-900 font-medium text-xl mb-3">Profil</div>
+            <p class="m-0 p-0 text-600 line-height-3 mr-3">
+                <!-- Placeholder -->
+            </p>
+        </div>
+        <div class="col-12 lg:col-10">
+            <div class="grid formgrid p-fluid">
+                <div class="field mb-4 col-12">
+                    <label for="id" class="font-medium text-900">ID</label>
+                    <input id="id" type="text" pInputText [(ngModel)]="newDebour.id" />
+                </div>
+                <div class="field mb-4 col-12">
+                    <label for="date" class="font-medium text-900">Date</label>
+                    <input id="date" type="date" pInputText [(ngModel)]="newDebour.date" />
+                </div>
+                <div class="field mb-4 col-12">
+                    <label for="libelle" class="font-medium text-900">Libellé</label>
+                    <input id="libelle" type="text" pInputText [(ngModel)]="newDebour.libelle" />
+                </div>
+                <div class="field mb-4 col-12">
+                    <label for="entreeTND" class="font-medium text-900">Entrée TND</label>
+                    <input id="entreeTND" type="text" pInputText [(ngModel)]="newDebour.entreeTND" />
+                </div>
+                <div class="field mb-4 col-12">
+                    <label for="sortieTND" class="font-medium text-900">Sortie TND</label>
+                    <input id="sortieTND" type="text" pInputText [(ngModel)]="newDebour.sortieTND" />
+                </div>
+                <div class="field mb-4 col-12">
+                    <label for="disponibleTND" class="font-medium text-900">Disponible TND</label>
+                    <input id="disponibleTND" type="text" pInputText [(ngModel)]="newDebour.disponibleTND" />
+                </div>
+                <div class="col-12">
+                    <button pButton pRipple label="Créer un Débour" class="w-auto mt-3"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

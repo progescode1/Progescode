@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "nom": "Ben Ahmed",
+      "prenom": "Mohamed",
+      "email": "mohamed.benahmed@example.com",
+      "telephone": "71 123 456"
+    },
+    {
+      "id": 2,
+      "nom": "Gharbi",
+      "prenom": "Fatma",
+      "email": "fatma.gharbi@example.com",
+      "telephone": "71 234 567"
+    },
+    {
+      "id": 3,
+      "nom": "Sassi",
+      "prenom": "Ali",
+      "email": "ali.sassi@example.com",
+      "telephone": "71 345 678"
+    },
+    {
+      "id": 4,
+      "nom": "Dridi",
+      "prenom": "Sonia",
+      "email": "sonia.dridi@example.com",
+      "telephone": "71 456 789"
+    },
+    {
+      "id": 5,
+      "nom": "Hassine",
+      "prenom": "Ahmed",
+      "email": "ahmed.hassine@example.com",
+      "telephone": "71 567 890"
+    }
+  ]
+  

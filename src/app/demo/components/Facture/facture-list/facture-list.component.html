@@ -1,0 +1,57 @@
+<div class="card">
+    <p-table
+        #dt
+        [value]="factures"
+        [paginator]="true"
+        [rows]="10"
+        [showCurrentPageReport]="true"
+        responsiveLayout="scroll"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[10, 25, 50]"
+        [globalFilterFields]="['numFacture', 'nomProduit', 'nomService']"
+    >
+        <ng-template pTemplate="caption">
+            <div class="flex flex-wrap gap-2 align-items-center justify-content-between">
+                <span class="p-input-icon-left w-full sm:w-20rem flex-order-1 sm:flex-order-0">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="onGlobalFilter(dt, $event)" placeholder="Global Search" class="w-full" />
+                </span>
+                <button (click)="navigateToCreateFacture()" pButton class="p-button-outlined w-full sm:w-auto flex-order-0 sm:flex-order-1" icon="pi pi-fw pi-file" label="Créer une Facture"></button>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="numFacture" class="white-space-nowrap" style="width: 20%">Numéro de Facture <p-sortIcon field="numFacture"></p-sortIcon></th>
+                <th pSortableColumn="nomProduit" class="white-space-nowrap" style="width: 20%">Nom du Produit <p-sortIcon field="nomProduit"></p-sortIcon></th>
+                <th pSortableColumn="nomService" class="white-space-nowrap" style="width: 20%">Nom du Service <p-sortIcon field="nomService"></p-sortIcon></th>
+                <th pSortableColumn="quantite" class="white-space-nowrap" style="width: 10%">Quantité <p-sortIcon field="quantite"></p-sortIcon></th>
+                <th pSortableColumn="prix" class="white-space-nowrap" style="width: 10%">Prix <p-sortIcon field="prix"></p-sortIcon></th>
+                <th pSortableColumn="total" class="white-space-nowrap" style="width: 10%">Total <p-sortIcon field="total"></p-sortIcon></th>
+                <th pSortableColumn="tva" class="white-space-nowrap" style="width: 10%">TVA <p-sortIcon field="tva"></p-sortIcon></th>
+                <th pSortableColumn="totalTTC" class="white-space-nowrap" style="width: 10%">Total TTC <p-sortIcon field="totalTTC"></p-sortIcon></th>
+                <th style="width: 10%">Actions</th> <!-- Nouvelle colonne pour les boutons d'action -->
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-facture>
+            <tr>
+                <td>{{ facture.numFacture }}</td>
+                <td>{{ facture.nomProduit }}</td>
+                <td>{{ facture.nomService }}</td>
+                <td>{{ facture.quantite }}</td>
+                <td>{{ facture.prix }}</td>
+                <td>{{ facture.total }}</td>
+                <td>{{ facture.tva }}</td>
+                <td>{{ facture.totalTTC }}</td>
+                <td>
+                    <ng-container *ngIf="facture.numFacture"> <!-- Vérification si l'ID existe pour afficher les boutons -->
+                        <button (click)="updateFacture(facture)" pButton icon="pi pi-pencil" class="p-button-outlined p-button-secondary mr-2 mb-2" tooltip="Update"></button>
+                        <button (click)="deleteFacture(facture)" pButton icon="pi pi-trash" class="p-button-outlined p-button-danger" tooltip="Delete"></button>
+                    </ng-container>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<p-confirmDialog header="Confirmation" key="confirm1" icon="pi pi-exclamation-triangle" message="Are you sure you want to proceed?"
+[style]="{width: '350px'}" acceptButtonStyleClass="p-button-text" rejectButtonStyleClass="p-button-text">
+</p-confirmDialog>

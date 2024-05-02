@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "avantage": "Expertise comptable personnalisée",
+      "statut": "Actif"
+    },
+    {
+      "id": 2,
+      "avantage": "Conseils fiscaux et juridiques",
+      "statut": "Actif"
+    },
+    {
+      "id": 3,
+      "avantage": "Accompagnement dans la gestion financière",
+      "statut": "Actif"
+    },
+    {
+      "id": 4,
+      "avantage": "Analyse et optimisation des coûts",
+      "statut": "Actif"
+    },
+    {
+      "id": 5,
+      "avantage": "Services de paie et RH",
+      "statut": "Actif"
+    }
+  ]
+  
