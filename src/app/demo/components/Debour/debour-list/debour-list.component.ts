@@ -27,8 +27,7 @@ export class DebourListComponent implements OnInit {
   }
 
   navigateToCreateDebour(): void {
-    // Ajoutez la logique de navigation pour créer un nouveau debour
-    console.log('Navigating to create debour...');
+ this.router.navigate(['debour/create']);
   }
 
   updateDebour(debour: Debour): void {

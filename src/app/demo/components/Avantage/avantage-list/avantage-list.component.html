@@ -8,7 +8,7 @@
         responsiveLayout="scroll"
         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
         [rowsPerPageOptions]="[10, 25, 50]"
-        [globalFilterFields]="['avantage', 'statut']"
+        [globalFilterFields]="['avantage', ]"
     >
         <ng-template pTemplate="caption">
             <div class="flex flex-wrap gap-2 align-items-center justify-content-between">
@@ -22,19 +22,17 @@
         <ng-template pTemplate="header">
             <tr>
                 <th pSortableColumn="avantage" class="white-space-nowrap" style="width: 30%">Avantage <p-sortIcon field="avantage"></p-sortIcon></th>
-                <th pSortableColumn="statut" class="white-space-nowrap" style="width: 20%">Statut <p-sortIcon field="statut"></p-sortIcon></th>
                 <th style="width: 10%">Actions</th> <!-- Nouvelle colonne pour les boutons d'action -->
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-avantage>
             <tr>
                 <td>{{ avantage.avantage }}</td>
-                <td>{{ avantage.statut }}</td>
+               <!--<td>{{ avantage.statut }}</td>--> 
                 <td>
                     <ng-container *ngIf="avantage.id"> <!-- Vérification si l'ID existe pour afficher les boutons -->
                         <button (click)="updateAvantage(avantage)" pButton icon="pi pi-pencil" class="p-button-outlined p-button-secondary mr-2 " tooltip="Update"></button>
                         <button (click)="deleteAvantage(avantage)" pButton icon="pi pi-trash" class="p-button-outlined p-button-danger mr-2" tooltip="Delete"></button>
-                        <button (click)="changerStatut(avantage)" pButton icon="pi pi-refresh" class="p-button-outlined p-button-info  " tooltip="Change Status"></button>
                     </ng-container>
                    
                 </td>

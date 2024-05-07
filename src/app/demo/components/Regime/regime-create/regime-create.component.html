@@ -1,22 +1,14 @@
 <div class="card">
     <span class="text-900 text-xl font-bold mb-4 block">Créer un Régime</span>
     <div class="grid">
-        <div class="col-12 lg:col-2">
-            <div class="text-900 font-medium text-xl mb-3">Détails du Régime</div>
-            <p class="m-0 p-0 text-600 line-height-3 mr-3">
-                <!-- Placeholder -->
-            </p>
-        </div>
+        
         <div class="col-12 lg:col-10">
             <div class="grid formgrid p-fluid">
                 <div class="field mb-4 col-12">
                     <label for="regime" class="font-medium text-900">Régime</label>
                     <input id="regime" type="text" pInputText [(ngModel)]="newRegime.regime" />
                 </div>
-                <div class="field mb-4 col-12">
-                    <label for="statut" class="font-medium text-900">Statut</label>
-                    <p-dropdown [options]="statusOptions" [(ngModel)]="newRegime.statut" optionLabel="name" [showClear]="true" placeholder="Select a status"></p-dropdown>
-                </div>
+         
                 <div class="col-12">
                     <button pButton pRipple label="Créer un Régime" class="w-auto mt-3"></button>
                 </div>

@@ -16,9 +16,12 @@ export class ClientComponent implements OnInit {
   selectedBanque:string[]=[]
   Assigner:any[]=[];
   Regime:any[]=[];
-  Service:any[]=[];
   Banque:any[]=[];
-  ngOnInit(): void {
+Associee: any[]|undefined;
+Avantage: any[]|undefined;
+selectedAvantage: any;
+rib:any[]=[];
+ngOnInit(): void {
     this.Assigner = [
       { name: "Mohamed Benali", code: "MB" },
       { name: "Fatima Bouazza", code: "FB" },
@@ -34,13 +37,7 @@ export class ClientComponent implements OnInit {
       { name: "Istanbul", code: "IST" },
       { name: "Paris", code: "PRS" }
     ];
-    this.Service =[
-      { name: "Audit", code: "AUD" },
-      { name: "Gestion des finances", code: "GF" },
-      { name: "Comptabilité générale", code: "CG" },
-      { name: "Contrôle de gestion", code: "CGE" },
-      { name: "Analyse financière", code: "AF" }
-    ]
+
     
     this.Banque = [
       { name: "Banque de Tunisie", code: "BT" },
@@ -49,20 +46,23 @@ export class ClientComponent implements OnInit {
       { name: "Banque Nationale Agricole", code: "BNA" },
       { name: "Attijari Bank", code: "AB" }
     ]
-    
+    // Assuming you need to declare a specific RIB
+
+
+
  
   }
   newClient: Client = {
-      id: '',
-      clientName: '',
-      email: '',
-      phone: '',
-      address: '',
-      avantage: '',
-      assigned: [],
-      regime: '',
-      service: [],
-      banque: []
+    id: '',
+    clientName: '',
+    email: '',
+    phone: '',
+    address: '',
+    avantage: '',
+    assigned: [],
+    regime: '',
+    banque: [],
+    rib: [],
   };
 
   createClient() {

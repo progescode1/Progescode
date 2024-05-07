@@ -1,4 +1,5 @@
 export interface Client {
+  
     id:string ;
       clientName: string,
       email: string,
@@ -7,7 +8,7 @@ export interface Client {
       avantage: string,
       assigned: string[],
       regime: string,
-      service: string[],
       banque: string[]
+      rib: string[],
 
 }
